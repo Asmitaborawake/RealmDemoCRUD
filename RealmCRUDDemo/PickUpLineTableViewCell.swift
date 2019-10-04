@@ -10,6 +10,16 @@ import UIKit
 
 class PickUpLineTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var pickuplineLbl: UILabel!
+    @IBOutlet weak var emailLbl: UILabel!
+    @IBOutlet weak var scoreLbl: UILabel!
+    
+    func configureData(pickuplinedata : PickUpLine)
+    {
+        pickuplineLbl.text = pickuplinedata.line
+        emailLbl.text = pickuplinedata.email
+        scoreLbl.text = pickuplinedata.scoreString()
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
